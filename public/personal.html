@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="space-y-10 max-w-md w-full">
+        <!-- Personal Section -->
+        <section id="personalSection" class="bg-white shadow-lg rounded-lg p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Initial Profile Setup</h2>
+            
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                <input type="text" id="name" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <div class="mb-4">
+                <label for="age" class="block text-gray-700 mb-2">Age</label>
+                <input type="number" id="age" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <div class="mb-4">
+                <label for="employment" class="block text-gray-700 mb-2">Employment Status</label>
+                <select id="employment" class="w-full p-2 border rounded-lg">
+                    <option value="employed">Employed</option>
+                    <option value="self-employed">Self-employed</option>
+                    <option value="student">Student</option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="retired">Retired</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="location" class="block text-gray-700 mb-2">Location / Currency Preference</label>
+                <input type="text" id="location" class="w-full p-2 border rounded-lg">
+            </div>
+        </section>
+
+        <!-- Expenses Section -->
+        <section id="expensesSection" class="bg-white shadow-lg rounded-lg p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Income Details</h2>
+            
+            <div class="mb-4">
+                <label for="primary-income" class="block text-gray-700 mb-2">Primary Monthly Income</label>
+                <input type="number" id="primary-income" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <div class="mb-4">
+                <label for="additional-income" class="block text-gray-700 mb-2">Additional Income</label>
+                <input type="number" id="additional-income" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Current Financial Status</h2>
+            
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">Monthly Fixed Expenses</h3>
+            
+            <div class="mb-4">
+                <label for="housing" class="block text-gray-700 mb-2">Housing (Rent/Mortgage)</label>
+                <input type="number" id="housing" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <div class="mb-4">
+                <label for="utilities" class="block text-gray-700 mb-2">Utilities (Electricity, Water, Gas)</label>
+                <input type="number" id="utilities" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <div class="mb-4">
+                <label for="insurance" class="block text-gray-700 mb-2">Insurance Premiums</label>
+                <input type="number" id="insurance" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <div class="mb-4">
+                <label for="loans" class="block text-gray-700 mb-2">Loan Payments</label>
+                <input type="number" id="loans" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <div class="mb-4">
+                <label for="phone-internet" class="block text-gray-700 mb-2">Phone/Internet Bills</label>
+                <input type="number" id="phone-internet" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <div class="mb-6">
+                <label for="subscriptions" class="block text-gray-700 mb-2">Subscriptions</label>
+                <input type="number" id="subscriptions" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">Variable Expenses</h3>
+            
+            <div class="mb-4">
+                <label for="groceries" class="block text-gray-700 mb-2">Groceries</label>
+                <input type="number" id="groceries" class="w-full p-2 border rounded-lg">
+            </div>
+
+            <button type="submit" id="nextButton" class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">
+                Submit
+            </button>
+        </section>
+    </div>
+    <script>
+        const response = await fetch('http://localhost:3000/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        
+    </script>
+    <script src="app.js"></script>
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="chart.js"></script>
+
+</body>
+</html>

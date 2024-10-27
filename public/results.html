@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Insights</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Your Financial Insights</h1>
+    
+    <!-- Section to display risk level -->
+    <div id="risk-output">Risk Level: </div>
+    
+    <!-- Section to display additional insights -->
+    <div id="insights-output">
+        <p>Savings Rate: <span id="savings-rate"></span>%</p>
+        <p>Spending Percentage: <span id="spending-percentage"></span>%</p>
+    </div>
+    
+    <!-- Chart container -->
+    <canvas id="expenseChart" width="400" height="200"></canvas>
+    
+    <script src="chart.js"></script>
+</body>
+</html>
